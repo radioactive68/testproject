@@ -1,0 +1,77 @@
+@import "bourbon"
+
++font-face("roboto", "../fonts/RobotoRegular/RobotoRegular", $file-formats: eot woff ttf)
++font-face("roboto", "../fonts/RobotoBold/RobotoBold", bold, $file-formats: eot woff ttf)
+
+
+
+
+
+.arr_t,.arr_b,.arr_r,.arr_l
+	position: relative
+	background: #ffffff
+	border: 1px solid #ddd
+
+.arr_t:after, .arr_t:before,.arr_b:after, .arr_b:before,.arr_r:after, .arr_r:before,.arr_l:after, .arr_l:before
+	border: solid transparent
+	height: 0
+	width: 0
+	content: " "
+	position: absolute
+	pointer-events: none
+
+.arr_t:after, .arr_t:before
+	bottom: 100%
+	left: 50%
+
+.arr_b:after, .arr_b:before
+	top: 100%
+	left: 50%
+
+.arr_r:after, .arr_r:before
+	left: 100%
+	top: 50%
+
+.arr_l:after, .arr_l:before
+	right: 100%
+	top: 50%
+
+.arr_t:after,.arr_b:after,.arr_r:after,.arr_l:after
+	border-color: rgba(255, 255, 255, 0)
+	border-width: 10px
+
+.arr_t:after
+	border-bottom-color: #ffffff
+	margin-left: -10px
+
+.arr_b:after
+	border-top-color: #ffffff
+	margin-left: -10px
+
+.arr_r:after
+	border-left-color: #ffffff
+	margin-top: -10px
+
+.arr_l:after
+	border-right-color: #ffffff
+	margin-top: -10px
+
+.arr_t:before,.arr_b:before,.arr_r:before,.arr_l:before
+	border-color: rgba(221, 221, 221, 0)
+	border-width: 11px
+
+.arr_t:before
+	border-bottom-color: #ddd
+	margin-left: -11px
+
+.arr_b:before
+	border-top-color: #ddd
+	margin-left: -11px
+
+.arr_r:before
+	border-left-color: #ddd
+	margin-top: -11px
+
+.arr_l:before
+	border-right-color: #ddd
+	margin-top: -11px
